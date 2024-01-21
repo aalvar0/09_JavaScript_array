@@ -17,7 +17,7 @@ export const getLongWords = function (words) {
   for (let index = 0; index < wordsLength; index++) {
     if (words[index].length >= 5) {
       const word = words[index];
-     
+
       expectedWords.push(word);
     }
   }

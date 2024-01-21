@@ -14,7 +14,7 @@ export const feedMonkeys = function (fruit) {
 
   for (let index = 0; index < collectionLenght; index++) {
     const monkey = `${MONKEYS[index]} ${fruit}`;
-    
+
     monkeys.push(monkey);
   }
   return monkeys;
