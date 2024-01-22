@@ -13,7 +13,11 @@ const VOTERS = [
   { name: "Jeff", age: 30, voted: true },
   { name: "Zack", age: 19, voted: false },
 ];
-test("getTotalVoters function", () => {
-  const totalVoters = getTotalVoters(VOTERS);
-  expect(totalVoters).toBe(7);
+
+describe("getTotalVoters function", () => {
+  test("when given an array of voters, then it returns the correct total number of voters", () => {
+    const totalVoters = getTotalVoters(VOTERS);
+
+    expect(totalVoters).toBe(7);
+  });
 });

@@ -2,9 +2,10 @@ import extractCountriesWithFiveCharactersOrFewer from "./extractCountriesWithFiv
 
 const COUNTRIES = ["United Kingdom", "Italy", "France", "Portugal", "Greece"];
 
-describe("", () => {
-  test("extractCountriesWithFiveCharactersOrFewer returns correct array", () => {
+describe("extractCountriesWithFiveCharactersOrFewer function", () => {
+  test("when given countries, then it returns the correct array", () => {
     const result = extractCountriesWithFiveCharactersOrFewer(COUNTRIES);
+
     expect(result).toEqual(["Italy"]);
   });
 });

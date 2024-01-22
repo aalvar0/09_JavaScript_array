@@ -22,13 +22,15 @@ const CUSTOMERS = [
     member: true,
   },
 ];
-test("customersWhoBelongToMembership function", () => {
-  const filteredCustomers = customersWhoBelongToMembership(CUSTOMERS);
-  const expectedOutput = [
-    { name: "Foo", member: true },
-    { name: "Fizz", member: true },
-    { name: "FizzBuzz", member: true },
-  ];
+describe("customersWhoBelongToMembership function", () => {
+  test("when given customers, then it returns the correct filtered customers", () => {
+    const filteredCustomers = customersWhoBelongToMembership(CUSTOMERS);
 
-  expect(filteredCustomers).toEqual(expectedOutput);
+    const expectedOutput = [
+      { name: "Foo", member: true },
+      { name: "Fizz", member: true },
+      { name: "FizzBuzz", member: true },
+    ];
+    expect(filteredCustomers).toEqual(expectedOutput);
+  });
 });
