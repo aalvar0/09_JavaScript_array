@@ -12,3 +12,12 @@
  */
 
 const LOCALES = ["EN", "GR", "FR", "IT", "PT"];
+
+function createLocalesSettings() {
+  return LOCALES.reduce((localesSettings, locale, index) => {
+    localesSettings[locale] = { id: index, enabled: index === 0 };
+    return localesSettings;
+  }, {});
+}
+
+export default createLocalesSettings;
