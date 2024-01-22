@@ -7,7 +7,7 @@
 const VALUES = [1, 2, 3];
 
 function getWordFromValues() {
-  return VALUES.join("");
+  return VALUES.reduce((acc, value) => acc + value, "");
 }
 
 export default getWordFromValues;

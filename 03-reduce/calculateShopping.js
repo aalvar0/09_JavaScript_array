@@ -13,13 +13,7 @@ const WISHES = [
 ];
 
 function calculateShopping(wishes) {
-  let totalCost = 0;
-
-  for (const item of wishes) {
-    totalCost += item.price;
-  }
-
-  return totalCost;
+  return wishes.reduce((totalCost, item) => totalCost + item.price, 0);
 }
 
 export default calculateShopping;

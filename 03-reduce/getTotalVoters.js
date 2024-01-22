@@ -20,7 +20,10 @@ const VOTERS = [
 ];
 
 function getTotalVoters() {
-  return VOTERS.filter((voter) => voter.voted).length;
+  return VOTERS.reduce(
+    (totalVoters, voter) => (voter.voted ? totalVoters + 1 : totalVoters),
+    0,
+  );
 }
 
 export default getTotalVoters;
